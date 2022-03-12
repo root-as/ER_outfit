@@ -65,3 +65,4 @@ for j in range(nof_outfits):
 
 print("\n---Best Poise---")
 print(max_poise_outfit)
+input()
