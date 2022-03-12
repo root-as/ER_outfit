@@ -1,4 +1,6 @@
 # ER_outfit
- Elden Ring random outfit generator
- 
- Input your max load - weapons/items and it will generate a list of possible outfits for mid rolls
+Random outfit generator for Elden Ring
+
+input: current weight and max weight
+
+output: random outfits and max poise outfit
