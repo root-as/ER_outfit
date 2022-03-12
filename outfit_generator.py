@@ -1,15 +1,10 @@
 import random
 from itertools import product
+from timeit import default_timer as timer
 import helms
 import chest
 import hands
 import legs
-
-
-# TODO:
-# Create 4 dictionaries: {item_name, [weight, poise]}
-# input: max stamina --> calculate max / med roll weight
-# output: x random outfits / max poise outfit
 
 
 #  < 30: fast roll
@@ -18,7 +13,6 @@ import legs
 max_weight = float(input("Enter max equip load: "))
 equipment_weight = float(input("Enter equipment weight: "))
 nof_outfits = int(input("Enter number of outfits: "))
-# print(max_weight)
 
 f_roll = (max_weight / 100 * 30) - equipment_weight
 m_roll = (max_weight / 100 * 69) - equipment_weight
@@ -34,8 +28,10 @@ all_combos = [
 ]
 
 # save outfits in dictionary
+start = timer()
 max_poise = 0.0
-max_poise_outfit = []
+max_poise_outfit = {}
+
 for i in range(len(all_combos)):
     total_weight = 0.0
     total_poise = 0.0
@@ -45,17 +41,25 @@ for i in range(len(all_combos)):
         total_poise += all_combos[i][key][1]
         outfit_list.append(key)
     if total_weight >= f_roll and total_weight <= m_roll:
-        outfit_list.append(total_weight)
-        outfit_list.append(total_weight + equipment_weight)
-        outfit_list.append(total_poise)
+        outfit_list.append(round(total_weight + equipment_weight, 1))
+        outfit_list.append(round(total_poise, 1))
         full_outfit[i] = outfit_list
         if total_poise > max_poise:
             max_poise = total_poise
-            max_poise_outfit = outfit_list
+            max_poise_outfit[i] = outfit_list
+
+stop = timer()
 
 # print random outfit / max poise outfit
+print(
+    "\nCreated",
+    nof_outfits,
+    "out of",
+    len(all_combos),
+    "possible combinations in",round(stop-start,2), "s:",
+)
 for j in range(nof_outfits):
     print(random.choice(list(full_outfit.values())))
 
-print("---Best Poise 4 items---")
-print(max_poise_outfit)
+print("\n---Best Poise---")
+print(random.choice(list(max_poise_outfit.values())))
