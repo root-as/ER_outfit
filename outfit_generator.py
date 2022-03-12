@@ -30,7 +30,7 @@ all_combos = [
 # save outfits in dictionary
 start = timer()
 max_poise = 0.0
-max_poise_outfit = {}
+max_poise_outfit = []
 
 for i in range(len(all_combos)):
     total_weight = 0.0
@@ -46,7 +46,7 @@ for i in range(len(all_combos)):
         full_outfit[i] = outfit_list
         if total_poise > max_poise:
             max_poise = total_poise
-            max_poise_outfit[i] = outfit_list
+            max_poise_outfit = outfit_list
 
 stop = timer()
 
@@ -56,10 +56,12 @@ print(
     nof_outfits,
     "out of",
     len(all_combos),
-    "possible combinations in",round(stop-start,2), "s:",
+    "possible combinations in",
+    round(stop - start, 2),
+    "s:",
 )
 for j in range(nof_outfits):
     print(random.choice(list(full_outfit.values())))
 
 print("\n---Best Poise---")
-print(random.choice(list(max_poise_outfit.values())))
+print(max_poise_outfit)
