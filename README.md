@@ -1,5 +1,5 @@
 # ER_outfit
-Random outfit generator
+Random outfit generator for Elden Ring
 
 input: current weight and max weight
 
