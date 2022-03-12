@@ -27,7 +27,7 @@ lower = {}
 full_outfit = {}
 
 # helms
-helms["A"] = [10, 2]
+helms["A"] = [10, 20]
 helms["B"] = [3, 4]
 
 # chest
