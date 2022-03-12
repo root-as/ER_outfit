@@ -1,6 +1,6 @@
 # ER_outfit
 Random outfit generator for Elden Ring
 
-input: current weight and max weight
+input: max weight and equiptment weight
 
 output: random outfits and max poise outfit
