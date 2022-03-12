@@ -29,7 +29,7 @@ all_combos = [
 
 # save outfits in dictionary
 start = timer()
-max_poise = 0.01
+max_poise = 0.0
 max_poise_outfit = []
 
 for i in range(len(all_combos)):
