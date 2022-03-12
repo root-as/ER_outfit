@@ -1,7 +1,10 @@
 import random
 from itertools import product
+import helms
+import chest
+import hands
+import legs
 
-from numpy import full
 
 # TODO:
 # Create 4 dictionaries: {item_name, [weight, poise]}
@@ -20,34 +23,17 @@ nof_outfits = int(input("Enter number of outfits: "))
 f_roll = (max_weight / 100 * 30) - equipment_weight
 m_roll = (max_weight / 100 * 69) - equipment_weight
 
-
-helms = {}
-chest = {}
-hands = {}
-lower = {}
 full_outfit = {}
 
-# helms
-helms["A"] = [10, 20]
-helms["B"] = [3, 4]
-
-# chest
-chest["C"] = [10, 2]
-chest["D"] = [3, 4]
-
-# hands
-hands["E"] = [10, 20]
-hands["F"] = [30, 45]
-
-# legs
-lower["G"] = [10, 52]
-lower["H"] = [3, 4]
-
-# Output
+# Generate combinations
 all_combos = [
-    dict(x) for x in product(helms.items(), chest.items(), hands.items(), lower.items())
+    dict(x)
+    for x in product(
+        helms.helms.items(), chest.chest.items(), hands.hands.items(), legs.legs.items()
+    )
 ]
 
+# save outfits in dictionary
 max_poise = 0.0
 max_poise_outfit = []
 for i in range(len(all_combos)):
@@ -67,8 +53,9 @@ for i in range(len(all_combos)):
             max_poise = total_poise
             max_poise_outfit = outfit_list
 
-
+# print random outfit / max poise outfit
 for j in range(nof_outfits):
     print(random.choice(list(full_outfit.values())))
+
 print("---Best Poise 4 items---")
 print(max_poise_outfit)
