@@ -13,11 +13,12 @@ from numpy import full
 # 30-69: med roll
 # >= 70: fat roll
 max_weight = float(input("Enter max equip load: "))
+equipment_weight = float(input("Enter equipment weight: "))
 nof_outfits = int(input("Enter number of outfits: "))
 # print(max_weight)
 
-f_roll = max_weight / 100 * 30
-m_roll = max_weight / 100 * 69
+f_roll = (max_weight / 100 * 30) - equipment_weight
+m_roll = (max_weight / 100 * 69) - equipment_weight
 
 
 helms = {}
@@ -59,6 +60,7 @@ for i in range(len(all_combos)):
         outfit_list.append(key)
     if total_weight >= f_roll and total_weight <= m_roll:
         outfit_list.append(total_weight)
+        outfit_list.append(total_weight + equipment_weight)
         outfit_list.append(total_poise)
         full_outfit[i] = outfit_list
         if total_poise > max_poise:
