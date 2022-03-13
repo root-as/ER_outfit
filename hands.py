@@ -1,5 +1,4 @@
 # hands by order of aqcuisition: [weight, poise]
-# 11.03.2022
 
 hands = {}
 
@@ -38,3 +37,6 @@ hands["Briar Gauntlets"] = [3.9, 3]
 hands["Mushroom Arms"] = [1.7, 0]
 hands["Eccentric's Manchettes"] = [2.9, 3]
 hands["Azur's Manchettes"] = [1.1, 0]
+hands["Bloodhound Knight Gauntlets"] = [3.5, 3]
+hands["Gelmir Knight Gauntlets"] = [3.9, 4]
+hands["Lusat's Manchettes"] = [1.1, 0]

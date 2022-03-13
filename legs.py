@@ -1,5 +1,4 @@
 # legs by order of aqcuisition: [weight, poise]
-# 11.03.2022
 
 legs = {}
 
@@ -45,3 +44,9 @@ legs["Blaidd's Greaves"] = [8.5, 14]
 legs["Briar Greaves"] = [7.3, 9]
 legs["Mushroom Legs"] = [3.1, 1]
 legs["Eccentric's Breeches"] = [5.1, 6]
+legs["Bloodhound Knight Greaves"] = [6.6, 8]
+legs["Gelmir Knight Greaves"] = [7.3, 11]
+legs["Prophet Trousers"] = [3.1, 1]
+legs["Consort's Trousers"] = [2.5, 1]
+legs["Old Sorcerer's Legwraps"] = [2.5, 1]
+legs["Old Aristocrat Shoes"] = [2, 1]

@@ -1,5 +1,4 @@
 # helms by order of aqcuisition: [weight, poise]
-# 11.03.2022
 
 helms = {}
 
@@ -67,3 +66,8 @@ helms["Hierodas Glintstone Crown"] = [3, 2]
 helms["Eccentric's Hood"] = [4, 4]
 helms["Witch's Glintstone Crown"] = [5.1, 3]
 helms["Azur's Glintstone Crown"] = [3.6, 2]
+helms["Bloodhound Knight Helm"] = [4.6, 4]
+helms["Gelmir Knight Helm"] = [5.1, 6]
+helms["Commoner's Headband"] = [1.4, 0]
+helms["Prophet Blindfold"] = [1, 0]
+helms["Lusat's Glintstone Crown"] = [3.6, 2]

@@ -1,5 +1,4 @@
 # chests by order of aqcuisition: [weight, poise]
-# 11.03.2022
 
 chest = {}
 
@@ -58,3 +57,8 @@ chest["Mushroom Body"] = [5.1, 1]
 chest["Leyndell Knight Armor"] = [11.8, 19]
 chest["Eccentric's Armor"] = [10.6, 15]
 chest["Azur's Glintstone Robe"] = [7.1, 3]
+chest["Bloodhound Knight Armor"] = [10.6, 14]
+chest["Gelmir Knight Armor"] = [11.8, 19]
+chest["Prophet Robe"] = [6.3, 3]
+chest["Upper-Class Robe"] = [4.1, 1]
+chest["Lusat's Robe"] = [7.1, 3]
