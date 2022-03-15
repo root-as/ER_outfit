@@ -55,6 +55,8 @@ print(
     "\nCreated",
     nof_outfits,
     "out of",
+    len(full_outfit),
+    "/",
     len(all_combos),
     "possible combinations in",
     round(stop - start, 2),
